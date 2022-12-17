@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "fir-shop-app-24b54"
+  },
+  "targets": {
+    "fir-shop-app-24b54": {
+      "hosting": {
+        "vite": [
+          "vite-e-shop"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
