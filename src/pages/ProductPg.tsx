@@ -66,7 +66,7 @@ const ProductPg: React.FC = () => {
   };
 
   return (
-    <div className="w-full h-full bg-sauvignon-cr">
+    <div className="w-full h-full">
       <BreadCrumbs />
       <AnimatePresence>
         <motion.article
@@ -122,7 +122,7 @@ const ProductPg: React.FC = () => {
 
             <div className="flex flex-col gap-6 w-full items-center my-6 md:flex-row md:gap-4">
               <Button
-                styles="w-full md:w-3/4 bg-blue-card p-3 text-xl lg:text-2xl text-white font-bold"
+                styles="w-full md:w-3/4 bg-red p-3 text-xl lg:text-2xl text-white font-bold"
                 func={() => {
                   dispatch(addToCart(cartItem));
                   dispatch(showCart());
