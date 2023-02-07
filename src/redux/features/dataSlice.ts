@@ -1,20 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { RootState } from "../store/store";
+import {collection, getDocs } from "firebase/firestore";
+import { db } from "firebase";
 
-import { getFirestore, collection, getDocs } from "firebase/firestore";
-import { initializeApp } from "firebase/app";
-
-export const firebaseConfig = {
-  apiKey: "AIzaSyAyzZpxTRH6K2kPwJoJIc98pIbzDf3Vfno",
-  authDomain: "fir-shop-app-24b54.firebaseapp.com",
-  projectId: "fir-shop-app-24b54",
-  storageBucket: "fir-shop-app-24b54.appspot.com",
-  messagingSenderId: "312518196401",
-  appId: "1:312518196401:web:9804694fcb8d3bf9d03690",
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore();
 const colRef = collection(db, "products");
 
 export const fetchData = createAsyncThunk("data/fetchItems", async () => {
@@ -112,6 +100,7 @@ export const dataSlice = createSlice({
         state.products = action.payload;
       })
       .addCase(fetchData.rejected, (state, action) => {
+        console.log("changed")
         state.status = "rejected";
         state.error = action.error.message;
       });
