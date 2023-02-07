@@ -8,7 +8,6 @@ const useFetcher = () => {
     function fetch(){
         dispatch(fetchData())
     }
-    
     return {status, fetch, dispatch, products}
 } 
 
