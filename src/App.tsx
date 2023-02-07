@@ -19,7 +19,6 @@ const App: React.FC = () => {
   useEffect(() => {
     if (status === "idle") {
       fetch();
-      console.log(products);
     } else if (status === "loading") return;
     else if (status === "rejected") {
       return alert("Error fetching data");
