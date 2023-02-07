@@ -26,7 +26,7 @@ import {motion} from "framer-motion"
 
      return (
         (tablet || desktop) ? 
-        (   <div className="w-screen bg-white sticky top-[6.1rem] lg:top-[7rem] z-[5]">
+        (   <div className="w-screen bg-white sticky top-[6.1rem] lg:top-[7rem] z-[5] shadow-lg">
                 <ul className="flex justify-center text-xs gap-16 py-[.4rem] lg-2:gap-40">
                     {displayMenu}
                 </ul>
