@@ -1,7 +1,7 @@
 const Footer:React.FC = () => {
 
     return ( 
-        <footer className="w-full bg-blue-header pt-10">
+        <footer className="w-full bg-blue-header pt-10 text-center md:text-start">
             <div className="flex flex-col justify-center md:flex-row gap-10 w-3/4 mx-auto text-white py-20">
                 <ul className="grid mx-auto w-3/5 gap-1">
                     <li className="text-2xl lg:text-3xl mb-3 font-serif font-semibold">Mibby Fashions</li>
@@ -23,13 +23,12 @@ const Footer:React.FC = () => {
                 </ul>
             </div>
            
-            <div className="w-full bg-sauvignon-cr text-black p-2 mt-8 font-bold">
-                <p className="mx-auto w-3/5 text-center">
+            <div className="w-full bg-sauvignon-cr text-black p-2 mt-8 font-semibold">
+                <p className="mx-auto w-3/5 text-center text-sm md:text-base">
                     <span className="mr-2">
                          &#169;
                     </span>
                      2022 All Rights Reserved Mibby Fashions&#8482;
-    
                 </p>
             </div>
         </footer>
