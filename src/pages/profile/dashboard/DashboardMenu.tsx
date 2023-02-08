@@ -15,7 +15,7 @@ const DashboardMenu: React.FC<Props> = ({ styles }) => {
 
   return (
     <div
-      className={`${styles} flex flex-row gap-10 w-11/12 items-start p-4 max-w-2xl lg:flex-col lg:items-center lg:w-fit lg:h-full bg-white border-2 border-black rounded-md`}
+      className={`${styles} flex flex-row gap-10 w-11/12 items-start p-3 max-w-2xl lg:flex-col lg:items-center lg:w-fit lg:h-full bg-white border-2 border-black rounded-md`}
     >
       <Link to={`/${path[1]}/${path[2]}/order-history`} className="w-full">
         <article className="flex flex-col gap-4 justify-center items-center text-center">
