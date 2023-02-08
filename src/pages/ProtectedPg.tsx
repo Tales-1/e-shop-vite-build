@@ -5,7 +5,7 @@ type Props = {
     accessGranted: boolean | null | undefined
 }
 
-const ProtectedPg:React.FC<Props>= ({children,accessGranted}) => {
+const ProtectedPg:React.FC<Props> = ({children,accessGranted}) => {
    if(!accessGranted){
         return <Navigate to = "/login" replace />
    }
