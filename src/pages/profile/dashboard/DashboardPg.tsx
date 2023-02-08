@@ -11,12 +11,15 @@ import Spinner from "components/Spinner";
 import { removeUser } from "redux/features/userSlice"
 import { useAppDispatch } from "redux/store/hooks"
 
-type ContextType = string
+type ContextType = {
+    contextStyles:string
+    name:string
+}
 
 const Dashboard:React.FC = () => {
     const [user, loading ] = useAuthState(auth);
     const [name, setName] = useState("");
-    const styles = "col-start-1 col-span-3 row-start-3 lg:col-start-2 lg:col-span-2 lg:row-start-2 lg:row-span-2"
+    const contextStyles = "col-start-1 col-span-3 row-start-3 lg:col-start-2 lg:col-span-2 lg:row-start-2 lg:row-span-2"
     const navigate = useNavigate();
     const notification = useNotification("Successfully Logged out.")
     const dispatch = useAppDispatch()
@@ -43,23 +46,22 @@ const Dashboard:React.FC = () => {
         return <Spinner styles="w-screen h-screen grid items-center justify-items-center z-50"/>
     }
     return (
-        <div className="w-screen h-screen grid items-center justify-center grid-cols-3 grid-rows-4">
-            <h1 className="text-center text-xl lg:text-3xl font-bold font-serif tracking-wide col-start-2">Welcome {name}!</h1>
+        <div className="w-screen h-screen flex flex-col gap-12 p-4 my-8 lg:mt-0 lg:grid items-center justify-center lg:grid-cols-3 lg:grid-rows-4">
+            <h1 className="text-center text-3xl lg-2:text-4xl font-bold font-serif tracking-wide col-start-2">Welcome {name}!</h1>
             <DashboardMenu styles="justify-self-center items-center justify-center row-start-2 col-start-1 col-span-3 lg:col-start-1 lg:row-span-2 lg:col-span-1"/>
             
+            <Outlet context={{contextStyles,name}}/>
             {/* <div>email: {user?.email}</div> */}
-            <Button styles="p-2 row-start-4 col-start-2" func={()=>{
+            <Button styles="p-2 lg:row-start-4 lg:col-start-2" func={()=>{
                 logout()
                 dispatch(removeUser())
                 notification()
                 }}>Logout</Button>
-                
-            <Outlet context={styles}/>
         </div>
     )
 }
 
-export function useStyles() {
+export function useProps() {
     return useOutletContext<ContextType>()
 }
 export default Dashboard
