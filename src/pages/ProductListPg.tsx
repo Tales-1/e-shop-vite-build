@@ -8,8 +8,8 @@ import { useAppDispatch, useAppSelector } from "redux/store/hooks"
 import SortItems from "components/products/SortProducts"
 import { motion } from "framer-motion"
 import textBr from "images/text-br.png"
-
 const LazyProductCard = lazy(() => import("components/products/ProductCard"))
+
 interface ProductObject { 
     id?:string,
     name?:string,
@@ -35,9 +35,8 @@ const ProductListPg:React.FC = () =>{
             const { name,price,id,url } = product
         
             return (
-                <Suspense fallback={<Spinner />}>
+                <Suspense fallback={<Spinner />} key={i}>
                     <LazyProductCard 
-                            key={i}
                             name={name}
                             price={price} 
                             urls={url}
