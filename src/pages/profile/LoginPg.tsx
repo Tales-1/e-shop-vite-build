@@ -8,6 +8,7 @@ import Button from "components/Button"
 import useStoreUser from "utils/hooks/useStoreUser"
 import Input from "components/Input"
 import { motion } from "framer-motion"
+
 const Login:React.FC = () =>{
     const [email, setEmail] = useState("")
     const [password,setPassword] = useState("")
@@ -15,7 +16,7 @@ const Login:React.FC = () =>{
     const notification = useNotification("Successfully Logged In!")
     const navigate = useNavigate()
     const {executeDispatch} = useStoreUser({name:user?.displayName, email:user?.email})
-
+    
     useEffect(()=>{
         if (loading) {
             // trigger loading screen
