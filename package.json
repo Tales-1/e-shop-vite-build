@@ -21,6 +21,7 @@
     "redux": "^4.2.0",
     "redux-persist": "^6.0.0",
     "use-react-router-breadcrumbs": "^4.0.1",
+    "vite-plugin-svgr": "^2.4.0",
     "vite-tsconfig-paths": "^4.0.3"
   },
   "devDependencies": {
