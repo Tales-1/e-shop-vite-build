@@ -68,10 +68,11 @@ const ProductPg: React.FC = () => {
   return (
     <div className="w-full h-full">
       <BreadCrumbs />
+      <div className="bg-dark py-4">
       <AnimatePresence>
         <motion.article
-          className="flex flex-col w-10/12 mx-auto mt-3 gap-8 px-6 py-8 md:flex-row lg:gap-8 justify-evenly  
-                    "
+          className="flex flex-col w-10/12 mx-auto shadow-lg gap-8 px-6 py-8 md:flex-row lg:gap-8 justify-evenly 
+          bg-white "
           variants={variant}
           initial="hidden"
           animate="show"
@@ -102,19 +103,19 @@ const ProductPg: React.FC = () => {
             <div className="grid gap-5 font-sans-serif md:mx-0 md:mr-auto mt-3 lg:mb-12">
               <h3 className="lg:text-lg ">Select Size</h3>
               <div className="flex flex-wrap flex-row gap-3">
-                <Button styles="p-2 border-2 rounded-full w-12 border-blue-card rounded-md">
+                <Button styles="p-2 border-b-2 w-12 border-blue-card rounded-md">
                   S
                 </Button>
-                <Button styles="p-2 border-2 rounded-full w-12 border-blue-card rounded-md">
+                <Button styles="p-2 border-b-2 w-12 border-blue-card rounded-md">
                   M
                 </Button>
-                <Button styles="p-2 border-2 rounded-full w-12 border-blue-card rounded-md">
+                <Button styles="p-2 border-b-2 w-12 border-blue-card rounded-md">
                   L
                 </Button>
-                <Button styles="p-2 border-2 rounded-full w-12 border-blue-card rounded-md">
+                <Button styles="p-2 border-b-2 w-12 border-blue-card rounded-md">
                   XL
                 </Button>
-                <Button styles="p-2 border-2 rounded-full w-12 border-blue-card rounded-md">
+                <Button styles="p-2 border-b-2 w-12 border-blue-card rounded-md">
                   XXL
                 </Button>
               </div>
@@ -141,6 +142,7 @@ const ProductPg: React.FC = () => {
           </motion.div>
         </motion.article>
       </AnimatePresence>
+      </div>
     </div>
   );
 };
