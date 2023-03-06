@@ -22,15 +22,10 @@ const SlidingMenu: React.FC<SlidingProps> = ({translate,toggle}) => {
             <ul className="flex flex-col ml-7 gap-14 text-xl font-sans-serif mt-16">
                 {displayMenu}
                 <li 
-                    className="animate-bounce hover:cursor-pointer flex justify-end w-screen"
+                    className="animate-bounce hover:cursor-pointer flex justify-end w-screen relative right-6"
                     onClick={toggle}
                     >
-                    <svg 
-                    className="rotate-180 w-14 mr-12" 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    viewBox="0 0 512 512"><path fill="#6E83B7" 
-                    d="M502 256 302 106v80H146v140h156v80zM78 186h40v140H78zM10 186h40v140H10z"/>
-                    </svg>
+                    x
                 </li>
             </ul>
         </nav>
