@@ -38,20 +38,10 @@ const SearchBar:React.FC = () => {
                     </div>
                     <input type="text" onChange={(e)=>setQuery(e.target.value)} value={query} id="simple-search" 
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl 
-                                    focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700
+                                    focus:ring-blue-500 focus:border-blue-500 block w-full pl-10  dark:bg-gray-700
                                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
-                                    dark:focus:border-blue-500 py-3" placeholder="Search" required />
+                                    dark:focus:border-blue-500 py-2 xl:py-3" placeholder="Search" required />
                 </div>
-
-                <button type="submit" 
-                        className="ml-2 px-2 text-sm font-medium text-white
-                                bg-sauvignon-cr rounded-xl border hover:bg-light-p 
-                                focus:ring-4 focus:outline-none focus:ring-blue-300
-                                "
-                        onClick={(e)=>searchItems(e)}>
-                            <svg className="w-6 h-6" fill="none" stroke="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                             <span className="sr-only">Search</span>
-                </button>
                 
                 <div className={`fixed flex flex-col left-0 top-0 bottom-0 bg-white ${dropdownStyles} w-screen overflow-scroll pt-10 duration-[500ms] transition-all origin-top z-[10]`}>
                     <button className="fixed top-10 right-10" onClick={(e:MouseEvent):void=>{
