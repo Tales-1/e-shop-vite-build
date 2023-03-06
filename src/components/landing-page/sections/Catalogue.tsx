@@ -36,7 +36,7 @@ const Catalogue: React.FC = () => {
         </div>
 
         <div className="h-full w-full py-6">
-          <div className="flex relative z-0 justify-evenly w-full max-w-[85rem] mx-auto">
+          <div className="flex relative z-0 justify-evenly w-4/5 max-w-[85rem] mx-auto">
             <CatalogueCard
               url="/collection/kurtas"
               src="https://res.cloudinary.com/db1m4tnkn/image/upload/v1667087752/e-shop-images/Kurta-11-1_flabev.jpg"
