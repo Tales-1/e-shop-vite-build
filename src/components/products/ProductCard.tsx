@@ -24,7 +24,7 @@ const ProductCard: React.FC<Props> = ({ name, price, urls, id }) => {
       }}
       whileHover={{ scale: 1.1 }}
       className="flex flex-col items-center 
-                        min-h-card w-full max-w-[14rem] lg-2:max-w-[17rem] rounded-lg will-change-transform"
+                        min-h-card w-full max-w-[14rem] rounded-lg will-change-transform"
     >
       <div className="grid relative shadow-lg h-full w-full">
         <Link
