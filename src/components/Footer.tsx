@@ -1,7 +1,7 @@
 const Footer:React.FC = () => {
 
     return ( 
-        <footer className="w-full bg-blue-header pt-10 text-center md:text-start">
+        <footer className="w-full bg-blue-header text-center md:text-start">
             <div className="flex flex-col justify-center md:flex-row gap-10 w-3/4 mx-auto text-white py-20">
                 <ul className="grid mx-auto w-3/5 gap-1">
                     <li className="text-2xl lg:text-3xl mb-3 font-serif font-semibold">Mibby Fashions</li>
